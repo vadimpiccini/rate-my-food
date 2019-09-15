@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+
+
+{% block title %}
+
+
+
+   My recipes
+
+{% endblock %}
+
+
+
+{% block main %}
+
+
+
+<h1>MY RECIPES</h1>
+<br/><br/>
+
+
+
+<div class="container">
+
+    {% for recipe in recipes %}
+
+        <form action="/recipe"  id='formName' name='formName'>
+    <button id="myrecipebutton"  style="font-size:20px" type="submit" name="id" value="{{ recipe.id_r }}">
+    <h2><b>{{ recipe.title }}</b></h2>
+    <hr>
+    <h4>
+    <b>&emsp;Date uploaded:</b>&emsp;{{recipe.date}}
+    <b>&emsp;Views:</b>&emsp;{{recipe.views}}
+    <br/>
+    <b>&emsp;Average rating:&emsp;{{recipe.rating_average|round(2)}}</b>
+    <br/>
+    <b>&emsp;Ratings:&emsp;</b>{{recipe.rating_number}}
+    <b>&emsp;Recipe id:</b>&emsp;{{recipe.id_r}}
+    </h4>
+    </button>
+</form>
+
+
+
+
+
+{% endfor %}
+
+</div>
+
+
+
+
+
+{% endblock %}

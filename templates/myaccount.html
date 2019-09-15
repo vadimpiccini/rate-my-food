@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+
+
+{% block title %}
+
+   My account
+
+
+{% endblock %}
+
+
+
+{% block main %}
+
+
+{% for user in users %}
+
+
+
+<h1>My account information</h1>
+<br/>
+
+    <h4>
+    <b>&emsp;Username:</b> {{ user.username }}
+    <br/><br/>
+    <b>&emsp;E-mail:</b> {{ user.email }}
+    </h4>
+
+    <br/><br/>
+<button id="changepassword" class= "btn btn-default btn-lg">
+<b>Change Password</b></b>
+</button>
+
+<br/>
+<br/>
+
+
+<script>
+$(document).ready(function(){
+
+        $("#cat").hide();
+
+    $("#changepassword").click(function(){
+        $("#cat").slideDown();
+        $("#changepassword").fadeOut();
+    });
+});
+</script>
+</head>
+<body>
+
+<div id="cat">
+<form action="{{ url_for('changepass') }}" method = "post">
+    <input name="oldpassword" style="font-size:20px" autocomplete="off" placeholder="Old password" type="password"/>
+    <br/>
+    <br/>
+
+    <input name ="newpassword" style="font-size:20px" autocomplete="off" placeholder="New password" type="password"/>
+    <br/>
+    (at least 5 characters)
+    <br/>
+    <br/>
+    <input type="submit" class= "btn btn-default btn-lg" id="ChangePass" value="Change password"/>
+</form>
+
+</div>
+
+
+
+
+
+{% endfor %}
+
+
+
+
+
+{% endblock %}

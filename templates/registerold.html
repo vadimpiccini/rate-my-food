@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Register
+{% endblock %}
+
+{% block main %}
+<h1> Register for Rate My Food</h1>
+    <br/>
+<form action="{{ url_for('registering') }}" method = "post">
+    <input name="username" autocomplete="off" placeholder="Username" type="text"/>
+    <br/>
+    <br/>
+
+    <input name ="hash" id="pass1" autocomplete="off" placeholder="Password" type="password">
+    <br/>
+    (at least 5 characters)
+    <br/>
+    <br/>
+
+    <input name ="hashconfirm" id="pass2" autocomplete="off" placeholder="Confirm Password" type="password">
+    <br/>
+    <br/>
+<div id="confirmMessage"></div>
+
+    <input name ="email" autocomplete="off" placeholder="E-mail" type="text">
+    <br/>
+    <br/>
+    <input type="submit" value="Register"/>
+</form>
+
+{% endblock %}
+
+

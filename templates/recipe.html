@@ -1,0 +1,121 @@
+{% extends "layout.html" %}
+
+
+
+{% block title %}
+
+   Recipes
+
+{% endblock %}
+
+
+
+{% block main %}
+
+        <script src="{{ url_for('static', filename='star.js') }}"></script>
+
+
+{% for recipe in recipes %}
+
+<div class="container">
+
+
+
+    <div class="jumbotron" id="jumbotronrecipe">
+
+
+
+    <h1 id="recipetitle">{{ recipe.title }}</h1>
+
+  <hr class="style17">
+
+<br/>
+
+
+
+    <img align="left" width="400" height="350"  id="recipepicture" class="img-circle" src="{{recipe.picture}}"/>
+
+
+    <br/><br/>
+    <h4><b>&emsp;From user:</b>&emsp; {{recipe.username}}
+    <b>&emsp;Date uploaded:</b>&emsp;{{recipe.date}}</h4>
+    <br/><br/><br/>
+
+    <h3><b>&emsp;Time:</b> {{ recipe.time }}</h3>
+    <h3><b>&emsp;Difficulty:</b> {{ recipe.difficulty }}</h3>
+    <br/>
+    <br/>
+    <div class="containerdiv" id="starcontainer">
+    <div>
+    <img  id="starblank" src="https://image.ibb.co/jpMUXa/stars_blank.png" alt="img">
+    </div>
+    <div class="cornerimage" id="starcorner" style="width:{{rating}}%;">
+    <img id="starfull" src="https://image.ibb.co/caxgdF/stars_full.png" alt="">
+    </div>
+    <br/>
+    <p id="successrate" style="color: green"></p>
+</div>
+
+<br/><br/><br/> <br/><br/><br/><br/><br/><br/>
+
+    <h2><b>&emsp;Instructions:</b> </h2><pre cols="50"><p> {{ recipe.content }}</p> </pre>
+
+    <br/>
+    <p>
+    <b>&emsp;Recipe id:</b>&emsp;{{recipe.id_r}}
+    <b>&emsp;Comments:</b> {{recipe.comment_number}}
+    </p>
+
+
+
+
+
+
+</div>
+
+
+
+<h2><b>  -------COMMENTS--------</b></h2>
+
+
+{% for comment in comments %}
+<div class="container">
+    <div class="jumbotron" id="jumbotroncomment">
+
+    <h4><b>&emsp;From user:</b>&emsp; {{comment.username}}
+    <b>&emsp;Date commented:</b>&emsp;{{comment.date}}</h4>
+    <br>
+    <div align="left">
+    <h3><b>&emsp;Comment:</b> {{comment.content}}</h3>
+    </div>
+
+    </div>
+</div>
+
+{% endfor %}
+<br/>
+<h3><b>Comment this recipe:</b></h3>
+<br/><br/>
+<form action="{{ url_for('comment') }}" method="post">
+
+    <textarea id="commentarea" name="comment" cols="50" rows="6" placeholder="Your comment here..." ></textarea>
+
+    <input name="recipe_id" type="hidden" value="{{ recipe.id_r }}">
+    <br/>
+    <br/>
+    <input type="submit" class= "btn btn-default btn-lg" id="ChangePass" value="Comment"/>
+</form>
+
+
+
+
+{% endfor %}
+</div>
+
+
+    <br/><br/> <br/><br/> <br/><br/>
+
+
+</div>
+
+{% endblock %}

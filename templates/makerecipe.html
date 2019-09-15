@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+
+{% block title %}
+ Register
+{% endblock %}
+
+{% block main %}
+<h1 style="font-size:50px"> WRITE YOUR RECIPE</h1>
+    <br/>
+    <br/>
+<div class=container>
+    <div class=well style="border-style:ridge">
+<form id="register" action="{{ url_for('register_recipe') }}" method = "post">
+    <h2> Recipe's name:</h2>
+    <input name="title" style="font-size:30px" autocomplete="off" placeholder="ex: Mushroom Lasagna" type="text"/>
+    <br/>
+    <br/>
+    <h2>Type of recipe:</h2>
+
+    <select style="font-size:30px" name="category" form="register">
+    <option value="Pasta">Pasta</option>
+    <option value="Fish">Fish</option>
+    <option value="Meat">Meat</option>
+    <option value="Desserts">Desserts</option>
+    </select>
+    <br/>
+    <br/>
+    <h2>Link to a photo for your recipe:</h2>
+    <input name="picture" style="font-size:30px" autocomplete="off" placeholder="ex: www.website/blabla.jpg" type="text"/>
+    <br/>
+    <br/>
+    <h2>How long does it take to make your recipe?</h2>
+    <input name ="time" style="font-size:30px" autocomplete="off" placeholder="ex: 30 minutes, 1 hour..." type="text"/>
+    <br/>
+
+    <br/>
+
+    <h2>How hard is your recipe?</h2>
+    <select name="difficulty" style="font-size:30px" form="register">
+    <option value="Easy">Easy</option>
+    <option value="Intermediate">Intermediate</option>
+    <option value="Hard">Hard</option>
+    </select>
+    <br/>
+    <br/>
+
+    <h3>Give us a detailed description of how to make your recipe:</h3>
+    <br/>
+    <textarea style="font-size:20px" name="recipe" cols="50" rows="15" placeholder="Ingredients: Milk, flour, butter..."></textarea>
+    <br/>
+    <br/>
+    <input type="submit" class= "btn btn-default btn-lg" id="ChangePass" value="Register your recipe"/>
+</form>
+
+</div>
+</div>
+{% endblock %}

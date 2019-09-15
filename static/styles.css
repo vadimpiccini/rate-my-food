@@ -1,0 +1,303 @@
+.container
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+}
+
+#something
+{
+    /* center contents */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+
+}
+
+
+
+#bestjumbotronXXX
+{
+    background-color:#ffffff;
+    height:600px;
+}
+
+#bestbutton
+{
+    height:590px;
+    width:350px;
+    background:transparent;
+    border:none;
+}
+
+#ButtonIndex
+{
+    padding:0;
+}
+
+#commentarea
+{
+    font-size:25px;
+    font-family: arial;
+}
+
+#ChangePass
+{
+  font-weight: bold;
+}
+
+#dropbest
+{
+    font-size:20px;
+    left:150px;
+    top:30px;
+}
+
+
+pre
+{
+    overflow-x: auto;
+    white-space:pre-wrap;
+    font-family: arial;
+    font-size: 200;
+}
+
+#logintron
+{
+    border-style: ridge;
+    width:400px;
+    background: #fbfbfb
+}
+
+.div-center
+{
+    position:absolute;
+    left:600px;
+}
+
+
+#lookingglass
+{
+    font-size:30px;
+    top:18px;
+}
+
+
+#myrecipebutton
+{
+    background:transparent;
+    width:600px;
+    font-size:30px;
+    border-style:ridge;
+}
+
+#recipetitle
+{
+     text-transform: uppercase;
+     font-family: Verdana;
+}
+
+#suggestion
+{
+    border-bottom: 1px solid #dee4ed;
+    font-size:20px;
+}
+
+
+#besthr:after{
+	background: #ffffff;
+}
+
+
+hr.style17 {
+	border-top: 1px solid #8c8b8b;
+	text-align: center;
+}
+hr.style17:after {
+	content: '§';
+	display: inline-block;
+	position: relative;
+	top: -14px;
+	padding: 0 10px;
+	background: #f0f0f0;
+	color: #8c8b8b;
+	font-size: 18px;
+	-webkit-transform: rotate(60deg);
+	-moz-transform: rotate(60deg);
+	transform: rotate(60deg);
+}
+
+
+
+
+#recipepicture
+{
+     border:1px solid #021a40;
+}
+
+#jumbotroncomment
+{
+    border-style:ridge
+}
+
+#jumbotronrecipe
+{
+    border-radius:0;
+    border-style: ridge;
+}
+
+
+#topnav
+{
+    width:100%;
+}
+
+
+#Title
+{
+    font-family: impact;
+    font-size: 100px;
+}
+
+/* colors for navbar */
+.navbar-default .navbar-brand .blue
+{
+    color: #537fbe;
+}
+.navbar-default .navbar-brand .red
+{
+    color: #ea433b;
+}
+.navbar-default .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+.navbar-default .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+
+main td
+{
+    /* left-align tables' cells */
+    text-align: left;
+}
+
+/* stylize text box */
+#q
+{
+    /* override typeahead.js's transparent background */
+    background-color: #ffffff !important;
+
+    /* text box's width */
+    width: 250px;
+
+}
+#Button
+{
+    background:transparent;
+    border:0;
+    position:absolute;
+    right:620px;
+    bottom:5px;
+}
+
+
+
+
+/* stylize typeahead.js a la http://twitter.github.io/typeahead.js/css/examples.css */
+.tt-menu
+{
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 150px;
+    overflow-y: auto;
+    width: 250px;
+
+}
+.tt-suggestion.tt-cursor {
+    background-color: #0097cf;
+    color: #fff;
+    cursor: pointer;
+
+}
+.tt-suggestion {
+    margin: 0;
+    padding: 6px 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#starcontainer
+{
+  border: 0;
+  float: left;
+  position: relative;
+  width: 300px;
+  left:170px;
+}
+#starcorner {
+  border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+ }
+ #starfull{
+   max-width: 300px;
+ }
+ #starblank{
+   max-width: 300px;
+
+ }
+
+
+
+
+
+#starcontainerbest
+{
+  border: 0;
+  float: left;
+  position: relative;
+  width: 150px;
+  left:90px;
+}
+
+#starfullbest{
+   max-width: 150px;
+ }
+ #starblankbest{
+   max-width: 150px;
+
+ }
